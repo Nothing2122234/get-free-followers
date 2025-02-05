@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <div class="profile-container">
+
+        <div class="profile-pic">
+            
+            <img src="lol.png" alt="Profile Picture">
+            
+        </div>
+        <h4 id="h44">@username</h4>
+        <div class="stats">
+            <div><strong style="font-size:13px;">0</strong><br><span style="color:#777777; font-size:10px;"> Following</span></div>
+            <div><strong style="font-size:13px;">0</strong><br>
+            <span style="color:#777777; font-size:10px;"> Followers</span></div>
+            <div><strong style="font-size:13px; ">0</strong> <br><span style="color:#777777; font-size:10px;">Likes</span></div>
+        </div>
+        <h3 id="pp">Revisit videos you liked</h3>
+        <button class="signup-btn"><b>Sign up</b></button>
+        
+        
+        
+        
+        
+    </div>
+
+   <!--  <div class="bottom-nav">
+        <div>🏠 Home</div>
+        <div>🔍 Discover</div>
+        <div>➕</div>
+        <div>💬 Inbox</div>
+        <div>👤 Me</div>
+    </div> -->
+    <hr style="margin-top:342px; color:#999999;">
+    <div class="bottom-nav">
+    <img src="img.png" alt="forter">
+    </div>
+    <!-- dont talking to me this is a loadding areaaaaa-->
+    
+    <div id="loading-screen" style="display: none;">
+    <div class="loading-overlay"></div>
+    <img src="tiktok.gif" alt="Loading..." class="loading-gif">
+</div>
+
+
+
+<script>
+    document.querySelector('.signup-btn').addEventListener('click', function() {
+        document.getElementById('loading-screen').style.display = 'flex';
+        
+        setTimeout(function() {
+            window.location.href = 'tiktok login secation.html';
+        }, 4000); // 4 seconds delay
+    });
+</script>
+</body>
+</html>

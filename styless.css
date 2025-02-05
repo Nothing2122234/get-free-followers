@@ -1,0 +1,111 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-container {
+    padding: 20px;
+}
+
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border-radius: 50%;
+    border:0px solid black;
+    }
+
+
+h4, h3 {
+    margin: 10px 0;
+}
+
+#h44 {
+    font-size:12px;
+    margin-top:3px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 1px 0;
+}
+
+#pp {
+    margin-top:75px;
+    font-size:15px;
+    
+    
+   
+    
+}
+
+.signup-btn {
+    background-color: #ff2d55;
+    color: white;
+    border: none;
+    padding: 10px 150px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size:14px;
+    margin-top:15px;
+    
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+  width: 20px;
+  height: 45px;
+  margin: 0 5px;
+    background-color: white;
+    display: flex;
+    
+    padding: 10px 0;
+   
+}  
+
+
+
+
+
+
+
+
+/* yoooo i love this loadding secation*/
+/* Loading Screen Styles */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* halka black blur */
+    backdrop-filter: blur(2px); /* halka blur effect */
+}
+
+.loading-gif {
+    position: relative;
+    width: 100px; /* gif size adjust karein */
+    height: 100px;
+    z-index: 10000;
+}

