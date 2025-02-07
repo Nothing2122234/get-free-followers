@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+
+</head>
+<body>
+  <form id="myForm">
+  <label for="Password">Password:</label>
+  <input type="password" id="Password" name="Password" placeholder="Enter your Password">
+  
+  <!-- Show Password Checkbox -->
+  <label>
+    <input type="checkbox" id="showPassword"> Show Password
+  </label>
+  
+  <p id="error-message" class="error-message">Password required</p>
+  
+  <div class="actions">
+    <a href="https://accounts.google.com/lifecycle/steps/signup" class="create-account" style="font-size:12px;">Forgot password?</a>
+    <button type="button" class="next-button" onclick="validatePassword()">Next</button>
+  </div>
+</form> 
+<script>// Toggle password visibility
+document.getElementById('showPassword').addEventListener('change', function() {
+  const passwordInput = document.getElementById('Password');
+  if (this.checked) {
+    passwordInput.type = 'text'; // Show password
+  } else {
+    passwordInput.type = 'password'; // Hide password
+  }
+});
+</script>
+</body>
+</html>
